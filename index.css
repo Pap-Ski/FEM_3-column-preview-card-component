@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --ff-headings: "Big Shoulders Display", sans-serif;
+  --ff-paragraphs: "Lexend Deca", sans-serif;
+  --fc-sedans-div: hsl(32, 77%, 52%);
+  --fc-suvs-div: hsl(184, 100%, 22%);
+  --fc-luxury-div: hsl(179, 100%, 13%);
+  --fc-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --fc-bg-hd-btn: hsl(0, 0%, 95%);
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 15px;
+  background: var(--fc-bg-hd-btn);
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  margin-top: 50px;
+  width: 900px;
+  height: 520px;
+  border-radius: 1%;
+  overflow: hidden;
+}
+
+.vehicle {
+  display: flex;
+  flex-direction: column;
+  padding: 45px;
+}
+
+.sedans {
+  background: var(--fc-sedans-div);
+}
+.suvs {
+  background: var(--fc-suvs-div);
+}
+.luxury {
+  background: var(--fc-luxury-div);
+}
+
+.vh-icon img {
+  height: 50px;
+}
+
+.div-heads {
+  font-size: 40px;
+  font-family: var(--ff-headings);
+  color: var(--fc-bg-hd-btn);
+}
+
+.vh-desc {
+  line-height: 30px;
+  font-family: var(--ff-paragraphs);
+  color: var(--fc-paragraphs);
+}
+
+.vh-btn {
+  margin-top: 60px;
+  padding: 15px;
+  width: 80%;
+  border-radius: 30px;
+  background-color: var(--fc-bg-hd-btn);
+  font-family: var(--ff-paragraphs);
+}
+.vh-btn.sedans {
+  border: 1px solid var(--fc-sedans-div);
+  color: var(--fc-sedans-div);
+}
+.vh-btn.suvs {
+  border: 1px solid var(--fc-suvs-div);
+  color: var(--fc-suvs-div);
+}
+.vh-btn.luxury {
+  border: 1px solid var(--fc-luxury-div);
+  color: var(--fc-luxury-div);
+}
+.vh-btn:hover {
+  background: transparent;
+  border: 2px solid var(--fc-bg-hd-btn);
+  color: var(--fc-bg-hd-btn);
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  body {
+    margin: 15px;
+  }
+  .main {
+    width: 100%;
+    height: 280vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .vehicle {
+    height: 100%;
+  }
+  .vh-btn {
+    width: 150px;
+  }
+}
